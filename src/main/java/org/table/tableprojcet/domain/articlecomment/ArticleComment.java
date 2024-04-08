@@ -10,6 +10,7 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.table.tableprojcet.domain.article.Article;
+import org.table.tableprojcet.domain.auditingfields.AuditingFields;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -21,9 +22,8 @@ import java.util.Objects;
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })
-@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class ArticleComment {
+public class ArticleComment extends AuditingFields {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -35,18 +35,7 @@ public class ArticleComment {
     private String content;
 
 
-    @CreatedDate
-    @Column(nullable = false)
-    private LocalDateTime createdAt;
-    @CreatedBy
-    @Column(nullable = false , length = 100)
-    private String createdBy;
-    @LastModifiedDate
-    @Column(nullable = false)
-    private LocalDateTime modifiedAt;
-    @LastModifiedBy
-    @Column(nullable = false,length = 100)
-    private String modifiedBy;
+
 
     protected ArticleComment(){}
 
