@@ -998,3 +998,9 @@ insert into article (title, content, hashtag, created_by, modified_by, created_a
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Donec posuere metus vitae ipsum.', 'Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.', null, 'Leigh', 'Ameline', '2023-06-18 14:14:17', '2024-03-19 01:10:10');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Fusce consequat.', 'Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.', null, 'Juana', 'Nestor', '2023-12-19 22:50:37', '2024-04-04 01:54:01');
 insert into article (title, content, hashtag, created_by, modified_by, created_at, modified_at) values ('Suspendisse potenti.', 'Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.', 'Red', 'Stewart', 'Kareem', '2023-05-01 13:37:28', '2024-03-18 09:16:57');
+INSERT INTO article_comment (article_id, created_at, modified_at, created_by, modified_by, content)
+VALUES
+    (1, '2024-04-11 12:00:00', '2024-04-11 12:00:00', 'user1', 'user1', '이 글은 정말 유용합니다.');
+INSERT INTO article_comment (article_id, created_at, modified_at, created_by, modified_by, content)
+VALUES
+    (1, '2024-04-11 12:30:00', '2024-04-11 12:30:00', 'user2', 'user2', '매우 도움이 되는 글입니다.');
