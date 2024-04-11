@@ -1,5 +1,8 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,windows,intellij+all,eclipse,java,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows,intellij+all,eclipse,java,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/eclipse,intellij+all,java,macos,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,intellij+all,java,macos,windows
+
+###Querydsl
+/src/main/generated
 
 ### Eclipse ###
 .metadata
@@ -13,6 +16,15 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+# Ignore .bin files
+*.bin
+
+# Ignore .rock files
+*.rock
+
+# Ignore .xml files
+*.xml
+*.lock
 
 # External tool builders
 .externalToolBuilders/
@@ -152,8 +164,8 @@ fabric.properties
 
 .idea/*
 
-#!.idea/codeStyles
-#!.idea/runConfigurations
+!.idea/codeStyles
+!.idea/runConfigurations
 
 ### Java ###
 # Compiled class file
@@ -214,25 +226,6 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -259,4 +252,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,windows,intellij+all,eclipse,java,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/eclipse,intellij+all,java,macos,windows
