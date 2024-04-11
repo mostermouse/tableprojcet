@@ -28,7 +28,7 @@ local.properties
 *.idx
 *.js
 *.css
-*.html
+
 *.properties
 *.yaml
 *.xml
