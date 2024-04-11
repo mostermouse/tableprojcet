@@ -1,6 +1,6 @@
 package org.table.tableprojcet.domain.article;
 
-import jakarta.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -12,16 +12,16 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.table.tableprojcet.domain.articlecomment.ArticleComment;
 import org.table.tableprojcet.domain.auditingfields.AuditingFields;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
 @Getter
-@ToString
+@ToString(callSuper = true)
 @Table(indexes = {
         @Index(columnList = "title"),
-        @Index(columnList = "hashtag"),
         @Index(columnList = "createdAt"),
         @Index(columnList = "createdBy")
 })

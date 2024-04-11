@@ -23,9 +23,19 @@ local.properties
 *.rock
 
 # Ignore .xml files
+/build
+*.probe
+*.idx
+*.js
+*.css
+*.html
+*.properties
+*.yaml
 *.xml
 *.lock
-
+*.json
+*.iml
+*.md
 # External tool builders
 .externalToolBuilders/
 
