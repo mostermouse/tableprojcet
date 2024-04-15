@@ -27,7 +27,7 @@ local.properties
 *.probe
 *.idx
 *.js
-*.css
+
 
 *.properties
 *.yaml
