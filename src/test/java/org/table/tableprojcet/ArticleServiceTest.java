@@ -1,10 +1,12 @@
 package org.table.tableprojcet;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
 import org.table.tableprojcet.domain.article.ArticleRepository;
 import org.table.tableprojcet.domain.type.SearchType;
 import org.table.tableprojcet.dto.ArticleDto;
@@ -30,9 +32,19 @@ class ArticleServiceTest {
         //given
 
         //when
-        List<ArticleDto> articles = sut.searchArticles(SearchType.TITLE, "search keyword"); //제목, 본문 , id, 닉네임 , 해시태그
+        Page<ArticleDto> articles = sut.searchArticles(SearchType.TITLE, "search keyword"); //제목, 본문 , id, 닉네임 , 해시태그
         //then
         assertThat(articles).isNotNull();
 
     }
+
+    @DisplayName("게시글을 조회하면, 게시글을 반환한다.")
+    @Test
+    void givenArticleId_whenSearchingArticle_thenReturnsArticle(){
+        ArticleDto articles = sut.searchArticle(1L);
+
+        assertThat(articles).isNotNull();
+    }
+
+
 }

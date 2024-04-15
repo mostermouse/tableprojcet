@@ -3,7 +3,7 @@ package org.table.tableprojcet.dto;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public record ArticleDto(
+public record ArticleDto( //record는 불변 데이터를 간단하게 표현 해줌
         LocalDateTime createdAt,
         String createdBy,
         String title,

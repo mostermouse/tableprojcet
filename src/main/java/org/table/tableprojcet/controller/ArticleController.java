@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
-@RequestMapping("/articles")
+@RequestMapping("/articles") //모든 종류의 http 요청을 처리하는데 사용
 @Controller
 public class ArticleController {
 

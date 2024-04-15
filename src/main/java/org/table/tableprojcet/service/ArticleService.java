@@ -1,6 +1,7 @@
 package org.table.tableprojcet.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.table.tableprojcet.domain.article.ArticleRepository;
@@ -17,10 +18,15 @@ public class ArticleService {
 
     private final ArticleRepository articleRepository;
 
-    @Transactional(readOnly = true)
-    public List<ArticleDto> searchArticles(SearchType searchType, String searchKeyword) {
-        return List.of();
+    @Transactional(readOnly = true) //트랜잭션 관리 애노테이션으로 readOnly 읽기 전용만 허용
+    public Page<ArticleDto> searchArticles(SearchType searchType, String searchKeyword) {
+        return Page.empty();
 
+
+    }
+    @Transactional(readOnly = true)
+    public ArticleDto searchArticle(long l) {
+        return null;
 
     }
 }
